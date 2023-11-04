@@ -14,6 +14,10 @@ export class PlantasListComponent implements OnInit {
     return this.plantas;
   }
 
+  set _plantas(plantas: Planta[]) {
+    this.plantas = plantas;
+  }
+
   ngOnInit(): void {
     this.getPlantasService();
   }
