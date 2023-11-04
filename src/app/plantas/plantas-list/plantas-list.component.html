@@ -1,1 +1,45 @@
-<p>plantas-lista works!</p>
+<div class="custom-separator my-3"></div>
+
+<img src="../assets/wallpaper.png" alt="vivero el otoño" class="w-100" />
+
+<div class="custom-separator my-3"></div>
+
+<div class="table-responsive w-100">
+  <table class="table table-hover custom-table">
+    <thead>
+      <tr>
+        <th id="titulo" class="bg-custom-dark fw-bolder text-white">#</th>
+        <th id="duracion" class="bg-custom-dark fw-bolder text-white">
+          Nombre en común
+        </th>
+        <th id="popularidad" class="bg-custom-dark fw-bolder text-white">
+          Tipo
+        </th>
+        <th id="lanzamiento" class="bg-custom-dark fw-bolder text-white">
+          Clima
+        </th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let planta of _plantas">
+        <td>
+          <dd>{{ planta.id }}</dd>
+        </td>
+        <td>
+          <dd>{{ planta.nombre_comun }}</dd>
+        </td>
+        <td>
+          <dd>{{ planta.tipo }}</dd>
+        </td>
+        <td>
+          <dd>{{ planta.clima }}</dd>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="d-flex flex-column">
+  <span>Total plantas de interior: <strong>3</strong> </span>
+  <span>Total plantas de exterior: <strong>2</strong></span>
+</div>

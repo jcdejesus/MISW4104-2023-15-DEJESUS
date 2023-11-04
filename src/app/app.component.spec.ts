@@ -1,12 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { PlantasModule } from './plantas/plantas.module';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       declarations: [AppComponent],
-      imports: [PlantasModule],
+      imports: [HttpClientTestingModule, PlantasModule],
     })
   );
 
