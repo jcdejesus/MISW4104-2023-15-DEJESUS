@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Planta } from '../shared/models';
+import { Planta, Tipo } from '../shared/models';
 import { PlantasListService } from './plantas-list.service';
 
 @Component({
@@ -28,5 +28,15 @@ export class PlantasListComponent implements OnInit {
     this.plantasListService.getPlantas().subscribe((plantas: Planta[]) => {
       this.plantas = plantas;
     });
+  }
+
+  countPlantsByExteriorType() {
+    return this.plantas.filter((planta) => planta.tipo === Tipo.Exterior)
+      .length;
+  }
+
+  countPlantsByInteriorType() {
+    return this.plantas.filter((planta) => planta.tipo === Tipo.Interior)
+      .length;
   }
 }
