@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  :root,
+  body,
+  div,
+  a,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  ul,
+  li {
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+  }
+
+:root {
+    --primary-bg-color: #333A40;
+    --primary-spearator-color: #D9D9D9;
+}
+
+p, 
+span, 
+li,
+a,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn,
+input
+{
+    font-family: 'Martel Sans', sans-serif;
+}
+
+
+.root {
+    min-height: 100vh;
+}
+
+.bg-custom-dark {
+    background-color: var(--primary-bg-color) !important;
+}
+
+.custom-container {
+    max-width: 992px;
+}
+
+.custom-separator {
+    border-top: 1px solid var(--primary-spearator-color);
+}
